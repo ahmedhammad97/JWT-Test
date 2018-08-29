@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JWT test</title>
+  </head>
+  <body>
+    <center>
+
+      <% if(username){ %>
+        <h1>Welcome <%=username%></h1>
+      <%}else{ %>
+        <h1>Welcome Stranger!</h1>
+        <br /><br />
+        <form action="/" method="post">
+          <input type="text" name="username" value="" placeholder="Username" required="true" maxlength="24">
+          <br /><br />
+          <button type="submit" name="button">Register</button>
+        </form>
+      <% }%>
+
+    </center>
+
+    <script>
+      <% if(token){ %>
+        localStorage.setItem("token", <%=token%>);
+        console.log("Token saved");
+      <% } %>
+    </script>
+  </body>
+</html>

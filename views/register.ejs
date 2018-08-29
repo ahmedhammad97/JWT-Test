@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+  </head>
+  <body>
+    <h2>Registered successfully</h2>
+  </body>
+
+    <script>
+      setTimeout(()=>{
+        var token = window.location.pathname.substr(10);
+        document.cookie = `token=${token}; expires=Thu, 30 Aug 2018 12:00:00 UTC; path=/`;
+      },100);
+
+      setTimeout(()=>{
+        window.location.href = window.location.hostname + ":2222/";
+      },300)
+    </script>
+</html>
